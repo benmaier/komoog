@@ -13,7 +13,7 @@ setup(
     author_email=__email__,
     url='https://github.com/benmaier/komoog',
     license=__license__,
-    description="A short description of the package.",
+    description="Convert komoot hiking trips to sounds.",
     long_description='',
     packages=setuptools.find_packages(),
     python_requires='>=3.6',
