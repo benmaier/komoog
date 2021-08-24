@@ -19,6 +19,7 @@ setup(
     python_requires='>=3.6',
     install_requires=[
                 'numpy>=1.17',
+                'gpxpy==1.4.2',
     ],
     tests_require=['pytest', 'pytest-cov'],
     setup_requires=['pytest-runner'],

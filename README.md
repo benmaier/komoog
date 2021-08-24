@@ -1,7 +1,4 @@
-*Note: This is a dummy README for the package you want to build. For a README for the package builder, check out
-[PACKAGE_CREATION_README.md](https://github.com/benmaier/komoog/blob/main/PACKAGE_CREATION_README.md)*
-
-![logo](https://github.com/benmaier/komoog/raw/main/img/Fig1.png)
+# komoog
 
 [![CircleCI](https://circleci.com/gh/benmaier/komoog.svg?style=svg)](https://circleci.com/gh/benmaier/komoog)
 
@@ -11,9 +8,6 @@ Description of this package goes here.
 * documentation: http://komoog.benmaier.org/
 
 ```python
-from komoog.sqrt import get_sqrt_2
-
-print(get_sqrt_2())
 ```
 
 ## Install
