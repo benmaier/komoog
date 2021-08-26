@@ -1,7 +1,7 @@
 Tutorial
 ========
 
-.. code:: ipython3
+.. code:: python
 
     import komoog.komoot as komoot
     import komoog.audio as audio
@@ -10,11 +10,11 @@ Tutorial
 Download komoot tours
 ---------------------
 
-.. code:: ipython3
+.. code:: python
 
     tours = komoot.download_all_komoot_tours()
 
-.. code:: ipython3
+.. code:: python
 
     for i, tour in enumerate(tours):
         print(i, tour['name'])
@@ -43,7 +43,7 @@ Load komoot tours from harddrive
 
 Tours are saved in ``~/.komoog/``.
 
-.. code:: ipython3
+.. code:: python
 
     import komoog.io as io
     tours = io.read_tours()
@@ -51,7 +51,7 @@ Tours are saved in ``~/.komoog/``.
 Plot elevation profile
 ----------------------
 
-.. code:: ipython3
+.. code:: python
 
     import komoog.gpx as gpx
     
@@ -65,13 +65,6 @@ Plot elevation profile
 
 
 
-.. parsed-literal::
-
-    Text(0, 0.5, 'elevation [m]')
-
-
-
-
 .. image:: output_8_1.png
 
 
@@ -81,18 +74,11 @@ Convert elevation profile to signal
 This will normalize the profile to the correct ranges and remove
 duplicates
 
-.. code:: ipython3
+.. code:: python
 
     x, y = audio.convert_distance_and_elevation_to_signal(distance, elevation)
     
     pl.plot(x,y )
-
-
-
-
-.. parsed-literal::
-
-    [<matplotlib.lines.Line2D at 0x165d87f10>]
 
 
 
@@ -104,7 +90,7 @@ By default, signals will be maximized. If you don’t want them maximized,
 define a maximum elevation difference that will correspond to the range
 [-1,1] instead, e.g. 2000 meters.
 
-.. code:: ipython3
+.. code:: python
 
     x, y = audio.convert_distance_and_elevation_to_signal(distance,
                                                           elevation,
@@ -116,20 +102,13 @@ define a maximum elevation difference that will correspond to the range
 
 
 
-.. parsed-literal::
-
-    (-1.0, 1.0)
-
-
-
-
 .. image:: output_12_1.png
 
 
 Convert signal to audio
 -----------------------
 
-.. code:: ipython3
+.. code:: python
 
     # approximate_length_in_seconds = 0 will give a single loop of the signal
     audio_data, sampling_rate = audio.convert_signal_to_audio(x,
@@ -141,12 +120,6 @@ Convert signal to audio
 
 
 
-.. parsed-literal::
-
-    [<matplotlib.lines.Line2D at 0x166593310>]
-
-
-
 
 .. image:: output_14_1.png
 
@@ -154,7 +127,7 @@ Convert signal to audio
 Loop wave
 ---------
 
-.. code:: ipython3
+.. code:: python
 
     audio_data, sampling_rate = audio.convert_signal_to_audio(
                                                          x,
@@ -166,12 +139,6 @@ Loop wave
 
 
 
-.. parsed-literal::
-
-    [<matplotlib.lines.Line2D at 0x1665b9e80>]
-
-
-
 
 .. image:: output_16_1.png
 
@@ -179,7 +146,7 @@ Loop wave
 Generate longer audio data and play it
 --------------------------------------
 
-.. code:: ipython3
+.. code:: python
 
     audio_data, sampling_rate = audio.convert_signal_to_audio(x,y,)
     audio.play_audio(audio_data, sampling_rate)
@@ -190,7 +157,7 @@ You should’ve heard a sound now. Note that by default, a sound length of
 Tune to different notes
 -----------------------
 
-.. code:: ipython3
+.. code:: python
 
     audio_data, sampling_rate = audio.convert_signal_to_audio(
                                                          x,
@@ -201,7 +168,7 @@ Tune to different notes
 
 These are the tunes that work:
 
-.. code:: ipython3
+.. code:: python
 
     audio._NOTES
 
@@ -232,7 +199,7 @@ These are the tunes that work:
 
 You can also tune to a specific frequency, e.g. 200 Hz.
 
-.. code:: ipython3
+.. code:: python
 
     audio_data, sampling_rate = audio.convert_signal_to_audio(
                                                          x,
@@ -244,7 +211,7 @@ You can also tune to a specific frequency, e.g. 200 Hz.
 Change sampling rate
 --------------------
 
-.. code:: ipython3
+.. code:: python
 
     audio_data, sampling_rate = audio.convert_signal_to_audio(
                                                          x,
@@ -256,14 +223,14 @@ Change sampling rate
 Write .wav file
 ---------------
 
-.. code:: ipython3
+.. code:: python
 
     io.write_wav('./example.wav',audio_data,sampling_rate)
 
 Converting tours to sound without going through all the hassle
 --------------------------------------------------------------
 
-.. code:: ipython3
+.. code:: python
 
     audio_data, sampling_rate = audio.convert_tour_to_audio(
                                          tours[2],
@@ -277,7 +244,7 @@ Converting tours to sound without going through all the hassle
 Make the frequency of the sound follow the elevation profile
 ------------------------------------------------------------
 
-.. code:: ipython3
+.. code:: python
 
     audio_data, sampling_rate = audio.convert_tour_to_audio(
                                          tours[2],
@@ -289,37 +256,12 @@ Make the frequency of the sound follow the elevation profile
                                         )
     audio.play_audio(audio_data, sampling_rate)
 
-.. code:: ipython3
-
-    audio.convert_tour_to_audio?
-
 Interactive conversion without downloading all tours previously
 ---------------------------------------------------------------
 
-.. code:: ipython3
+.. code:: python
 
     tour = komoot.choose_komoot_tour_live()
     
     audio_data, sampling_rate = audio.convert_tour_to_audio(tour)
     audio.play_audio(audio_data, sampling_rate)
-
-
-.. parsed-literal::
-
-    (1) Colorado Provencale in Rustrel – La Doa Loop from Rustrel
-    (2) Lookout – L´Aiguebrun Loop from Buoux
-    (3) Gorges de Régalon – Vue de la Gorge Loop from Quartier Gardet
-    (4) Forêt des Cèdres - Vue au sud – Belvédère Loop from Lacoste
-    (5) Crête du Grand luberon – Le Mourre Nègre (1125m) Loop from Rue de l'Église
-    (6) Beautiful Cliffs – Gorges d'Oppedette Loop from D 201
-    (7) Beautiful Cliffs – Gorges d'Oppedette Loop from D 201
-    (8) Chateau des Eveques Loop from Fontaine-de-Vaucluse
-    (9) Valescure vaucluse Loop from Fontaine-de-Vaucluse
-    (10) Colorado Provencale in Rustrel – Aussicht auf die Sahara Loop from Rustrel
-    (11) Chateau des Eveques – Belle vue Loop from Fontaine-de-Vaucluse
-    (12) Porte de Saignon – Ortskern Saignon Loop from Apt
-    (13) Ortskern Saignon – Porte de Saignon Loop from Apt
-    (14) Möllensee und Kiessee
-    Tour ID: 14
-
-
