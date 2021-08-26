@@ -265,3 +265,47 @@ Interactive conversion without downloading all tours previously
     
     audio_data, sampling_rate = audio.convert_tour_to_audio(tour)
     audio.play_audio(audio_data, sampling_rate)
+
+Play some melodies
+------------------
+
+.. code:: python
+
+    notes = ['C','D','E','F','G','F','E','D','C']
+    durations = [0.25]* 8 + [0.5] #seconds
+
+.. code:: python
+
+    import numpy as np
+
+    audios = []
+    for dur, note in zip(durations, notes):
+        audio_data, sampling_rate = audio.convert_tour_to_audio(
+                                             tours[2],
+                                             max_elevation_difference=1000,
+                                             tune=note,
+                                             approximate_length_in_seconds=dur,
+                                            )
+        audios.append(audio_data)
+    audio.play_audio(np.concatenate(audios).astype(np.int16), sampling_rate)
+
+.. code:: python
+
+    # with pauses
+    durations = ([0.25]*6+[0.5])*2 #seconds
+    notes = ['C','C','G','G','A','A','G','F','F','E','E','D','D','C']
+
+.. code:: python
+
+    pause = np.zeros((1000,))
+
+    audios = []
+    for dur, note in zip(durations, notes):
+        audio_data, sampling_rate = audio.convert_tour_to_audio(
+                                             tours[2],
+                                             max_elevation_difference=1000,
+                                             tune=note,
+                                             approximate_length_in_seconds=dur,
+                                            )
+        audios.extend([audio_data,pause])
+    audio.play_audio(np.concatenate(audios).astype(np.int16), sampling_rate)
