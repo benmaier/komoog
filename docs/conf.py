@@ -29,7 +29,13 @@ class Mock(MagicMock):
 
 MOCK_MODULES = [
                 #'wget',
-                #'scipy',
+                'numpy',
+                'scipy',
+                'scipy.interpolate',
+                'scipy.signal',
+                'scipy.io',
+                'gpxpy',
+                'simpleaudio',
                 #'scipy.sparse',
                 #'sympy',
                 #'SamplableSet',
