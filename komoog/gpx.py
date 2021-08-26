@@ -69,6 +69,18 @@ def convert_gpx_tracks_to_arrays(gpx_tracks):
 
     return distance, elevation
 
+def convert_tour_to_gpx_tracks(tour):
+
+    seg = gpxpy.gpx.GPXTrackSegment()
+
+    for point in tour['coordinates']
+        seg.points.append(gpxpy.gpx.GPXTrackPoint(point['lat'], point['lng'], elevation=point['alt']))
+
+    gpx_track = gpxpy.gpx.GPXTrack()
+    gpx_track.segments.append(seg)
+
+    return [gpx_track]
+
 if __name__=="__main__":
 
     with open('/Users/bfmaier/Downloads/Tour.gpx','r') as gpx_file:
