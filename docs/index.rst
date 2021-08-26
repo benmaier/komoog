@@ -1,8 +1,8 @@
-===============
+======
 komoog
-===============
+======
 
-.. image:: img/Fig1.png
+.. .. image:: img/Fig1.png
 
 .. raw:: latex
 

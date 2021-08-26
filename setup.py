@@ -19,10 +19,10 @@ setup(
     python_requires='>=3.6',
     install_requires=[
                        'numpy>=1.17',
-                       'numpy>=1.5',
+                       'scipy>=1.5',
                        'gpxpy>=1.4.2',
                        'simplejson>=3.17.2',
-                       'simpleaudio=>=1.0.4',
+                       'simpleaudio>=1.0.4',
     ],
     tests_require=['pytest', 'pytest-cov'],
     setup_requires=['pytest-runner'],

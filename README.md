@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/benmaier/komoog.svg?style=svg)](https://circleci.com/gh/benmaier/komoog)
 
-Convert your komoot tours to audio signals.
+Convert your [komoot](komoot.com) hiking/cycling trips to audio signals.
 
 * repository: https://github.com/benmaier/komoog/
 * documentation: http://komoog.benmaier.org/
@@ -30,7 +30,28 @@ play_audio(audio, sampling_rate)
 * Python 3.7
 * Python 3.8
 
-So far, the package's functionality was tested on Mac OS X and CentOS only.
+So far, the package's functionality was tested on macOS only.
+
+## Prerequisites
+
+Save your komoot credentials in `~/.komoog/komoot.json` as
+
+```json
+{
+    "email" : "your@email.com",
+    "password" : "yourpassword",
+    "clientid" : "yourclientid"
+}
+```
+
+You can find your client id in the komoot url when you log in. Click on your username, then
+on "Planned Tours" or "Completed Tours". The URL will change to something like
+
+```
+https://www.komoot.com/user/1851102841208/tours?type=planned
+```
+
+Here, `1851102841208` is your `clientid`.
 
 ## Dependencies
 
