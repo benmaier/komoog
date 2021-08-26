@@ -55,7 +55,3 @@ def read_gpx(fn):
         gpx = gpxpy.parse(gpx_file)
 
     return gpx
-
-
-if __name__ == "__main__":
-    get_credentials()
