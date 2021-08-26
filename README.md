@@ -27,6 +27,10 @@ So far, the package's functionality was tested on Mac OS X and CentOS only.
 `komoog` directly depends on the following packages which will be installed by `pip` during the installation process
 
 * `numpy>=1.17`
+* `scipy>=1.5.0`
+* `gpxpy>=1.4.2`
+* `simplejson>=3.17.2`
+* `simpleaudio=>=1.0.4`
 
 ## Documentation
 
