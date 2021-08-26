@@ -276,31 +276,31 @@ htmlhelp_basename = 'komoogdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-'papersize': 'a4paper',
-
-# The font size ('10pt', '11pt' or '12pt').
-'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-'preamble': r'''
-\usepackage[titles]{tocloft}
-''',
-
-# Latex figure (float) alignment
-'figure_align': 'htbp',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'komoog.tex', u'komoog Documentation',
-        u'Benjamin F. Maier', 'manual'),
-]
-
-pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'Benjamin F. Maier'),]
+#latex_elements = {
+## The paper size ('letterpaper' or 'a4paper').
+#'papersize': 'a4paper',
+#
+## The font size ('10pt', '11pt' or '12pt').
+#'pointsize': '10pt',
+#
+## Additional stuff for the LaTeX preamble.
+#'preamble': r'''
+#\usepackage[titles]{tocloft}
+#''',
+#
+## Latex figure (float) alignment
+#'figure_align': 'htbp',
+#}
+#
+## Grouping the document tree into LaTeX files. List of tuples
+## (source start file, target name, title,
+##  author, documentclass [howto, manual, or own class]).
+#latex_documents = [
+#    (master_doc, 'komoog.tex', u'komoog Documentation',
+#        u'Benjamin F. Maier', 'manual'),
+#]
+#
+#pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'Benjamin F. Maier'),]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
