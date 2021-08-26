@@ -6,6 +6,9 @@ Audio handling and conversion.
 import numpy as np
 from scipy.interpolate import interp1d
 from scipy.signal import savgol_filter
+import simpleaudio as sa
+
+from komoog.gpx import convert_gpx_tracks_to_arrays, convert_tour_to_gpx_tracks
 
 _NOTES = {
             'C': -9,
@@ -41,6 +44,13 @@ def get_tune(tune):
             raise ValueError("If `tune` is provided as a string, it has to be any of "+str(list(_NOTES.keys())))
 
     return tune
+
+def play_audio(audio_data, sampling_rate):
+    """
+    Play audio data.
+    """
+    play_obj = sa.play_buffer(audio_data, 1, 2,sampling_rate)
+    play_obj.wait_done()
 
 
 def convert_distance_and_elevation_to_signal(distance,
@@ -328,9 +338,82 @@ def convert_distance_and_elevation_to_profile_audio(
 
     return np.concatenate(audios).astype(np.int16), sampling_rate
 
+def convert_tour_to_audio(tour,
+                          max_elevation_difference=0,
+                          tune='C',
+                          sampling_rate=44100,
+                          approximate_length_in_seconds=1,
+                          set_tune_to_follow_tour_profile=False,
+                          ):
+    """
+    Convert a hiking tour to audio.
+
+    Parameters
+    ==========
+    tour : dict
+        A komoot tour item as provided by e.g.
+        :func:`komoog.io.read_tours`.
+    max_elevation_difference : float, default = 0
+        Used to control the level of the audio signal. If this
+        value is ``<= 0``, the audio level will always be maximized.
+        If given a positive value, this value will represent the maximum
+        scale of the audio signal. If the elevation profile's elevation
+        difference is larger than this value, the signal will simply be
+        maximized. A good value is ``max_elevation_difference = 2000``.
+    tune : str or float
+        Desired frequency of the sound. Can be any of
+
+        .. code:: python
+
+            [ 'C', 'C#', 'Db', 'D', 'D#', 'Eb', 'E', 'F', 'F#',
+              'Gb', 'G', 'G#', 'Ab', 'A', 'A#', 'Bb', 'B' ]
+
+        where ``'A'`` corresponds to 440Hz.
+
+        Can also be a frequency in Hz.
+    sampling_rate : int, default = 44100
+        Sampling rate in Hz
+    approximate_length_in_seconds : float, default = 1.
+        The desired length of the audio signal in seconds
+        If equal to zero, will return a single loop.
+    set_tune_to_follow_tour_profile : bool, defaukt = False
+        If set to ``True`` the tune of the returned audio
+        signal will follow the tour profile.
+
+    Returns
+    =======
+    audio : numpy.ndarray of numpy.int16
+        The transformed audio signal
+    sampling_rate : int
+        The sampling rate of the audio signal.
+    """
+
+    tracks = convert_tour_to_gpx_tracks(tour)
+    distance, elevation = convert_gpx_tracks_to_arrays(tracks)
+
+    if set_tune_to_follow_tour_profile:
+        audio, _ = convert_distance_and_elevation_to_profile_audio(
+                                                    distance,
+                                                    elevation,
+                                                    max_elevation_difference=max_elevation_difference,
+                                                    tune=tune,
+                                                    sampling_rate=sampling_rate,
+                                                    approximate_length_in_seconds=approximate_length_in_seconds,
+                                                    )
+    else:
+        audio, _ = convert_distance_and_elevation_to_audio(
+                                                distance,
+                                                elevation,
+                                                max_elevation_difference=max_elevation_difference,
+                                                tune=tune,
+                                                sampling_rate=sampling_rate,
+                                                approximate_length_in_seconds=approximate_length_in_seconds,
+                                                )
+
+    return audio, sampling_rate
+
 if __name__=="__main__":
 
-    from komoog.gpx import convert_gpx_tracks_to_arrays
     import gpxpy
     import simpleaudio as sa
     import matplotlib.pyplot as pl
