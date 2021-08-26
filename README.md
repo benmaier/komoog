@@ -27,6 +27,10 @@ This reminded me of wave tables I know from sound synthesis. Because I'm always
 looking for sounds to use when making music, I decided to write code that
 generates sounds from hiking profiles that can be used in sound synthesis.
 
+Note that I adapted code from
+[js-on/medium\_komoot](https://github.com/js-on/medium_komoot)
+to access trips on komoot.
+
 ## Install
 
     pip install komoog

@@ -31,6 +31,10 @@ always looking for sounds to use when making music, I decided to write
 code that generates sounds from hiking profiles that can be used in
 sound synthesis.
 
+Note that I adapted code from
+`js-on/medium_komoot <https://github.com/js-on/medium_komoot>`__ to
+access trips on komoot.
+
 Install
 -------
 
