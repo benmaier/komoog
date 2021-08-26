@@ -36,6 +36,7 @@ MOCK_MODULES = [
                 'scipy.io',
                 'gpxpy',
                 'simpleaudio',
+                'simplejson',
                 #'scipy.sparse',
                 #'sympy',
                 #'SamplableSet',
