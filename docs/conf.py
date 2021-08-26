@@ -58,7 +58,6 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
     'rst2pdf.pdfbuilder',
-    'sphinxcontrib.video',
 ]
 
 if USE_KATEX:
