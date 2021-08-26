@@ -21,17 +21,7 @@ komoog
    :maxdepth: 2
    :caption: Tutorial
 
-   tutorial/intro.rst
-
-.. raw:: latex
-
-   \part{Dev Guide}
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Dev Guide
-
-   devguide/intro.rst
+   tutorial/tutorial.rst
 
 .. raw:: latex
 

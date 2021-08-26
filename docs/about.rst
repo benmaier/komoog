@@ -1,7 +1,5 @@
 About
 =====
-komoog
-======
 
 Convert your `komoot <komoot.com>`__ hiking/cycling trips to audio
 signals.
