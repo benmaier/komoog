@@ -1,9 +1,9 @@
 PKG=komoog
-PYTHON=python
-PIP=pip
+PYTHON=python3
+PIP=pip3
 
 default: 
-	make ${PYTHON}
+	make python
 
 clean:
 	-rm -f *.o

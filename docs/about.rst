@@ -23,7 +23,7 @@ signals.
 After hiking I noticed that komoot comes with elevation profiles of tour
 hiking trips:
 
-.. image:: https://github.com/benmaier/komoog/blob/main/img/tour_profile.png
+.. image:: https://github.com/benmaier/komoog/raw/main/img/tour_profile.png
    :alt: Tour profile
 
 This reminded me of wave tables I know from sound synthesis. Because I'm

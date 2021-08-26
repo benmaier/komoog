@@ -21,7 +21,7 @@ play_audio(audio, sampling_rate)
 After hiking I noticed that komoot comes with elevation profiles of tour hiking
 trips:
 
-![Tour profile](https://github.com/benmaier/komoog/blob/main/img/tour_profile.png)
+![Tour profile](https://github.com/benmaier/komoog/raw/main/img/tour_profile.png)
 
 This reminded me of wave tables I know from sound synthesis. Because I'm always
 looking for sounds to use when making music, I decided to write code that
