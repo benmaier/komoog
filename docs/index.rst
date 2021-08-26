@@ -41,7 +41,11 @@ komoog
    :maxdepth: 2
    :caption: API
 
-   api/sqrt
+   api/komoot
+   api/audio
+   api/gpx
+   api/io
+   api/paths
 
 .. .. toctree::
 ..    :maxdepth: 2

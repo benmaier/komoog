@@ -1,7 +1,7 @@
-Sqrt
-----
+Paths
+-----
 
-.. automodule:: komoog.sqrt
+.. automodule:: komoog.paths
     :members:
     :undoc-members:
     :show-inheritance:

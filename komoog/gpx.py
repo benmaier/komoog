@@ -67,7 +67,11 @@ def convert_gpx_tracks_to_arrays(gpx_tracks):
         distance = distance[0]
         elevation = elevation[0]
 
-    return distance, elevation
+    # remove duplicates
+    ndx = np.where(np.diff(distance)>0)[0]
+    ndx = np.concatenate([ [0], ndx+1 ])
+
+    return distance[ndx], elevation[ndx]
 
 def convert_tour_to_gpx_tracks(tour):
 
