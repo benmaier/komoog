@@ -1,11 +1,9 @@
 # komoog
 
-[![CircleCI](https://circleci.com/gh/benmaier/komoog.svg?style=svg)](https://circleci.com/gh/benmaier/komoog)
-
 Convert your [komoot](komoot.com) hiking/cycling trips to audio signals.
 
 * repository: https://github.com/benmaier/komoog/
-* documentation: http://komoog.benmaier.org/
+* documentation: http://komoog.readthedocs.io/
 
 ```python
 from komoog.komoot import download_all_komoot_tours, choose_downloaded_komoot_tour
@@ -19,6 +17,15 @@ audio, sampling_rate = convert_tour_to_audio(tour,
                                             )
 play_audio(audio, sampling_rate)
 ```
+
+After hiking I noticed that komoot comes with elevation profiles of tour hiking
+trips:
+
+![Tour profile](https://github.com/benmaier/komoog/blob/main/img/tour_profile.png)
+
+This reminded me of wave tables I know from sound synthesis. Because I'm always
+looking for sounds to use when making music, I decided to write code that
+generates sounds from hiking profiles that can be used in sound synthesis.
 
 ## Install
 
@@ -65,7 +72,7 @@ Here, `1851102841208` is your `clientid`.
 
 ## Documentation
 
-The full documentation is available at [komoog.benmaier.org](http://komoog.benmaier.org).
+The full documentation is available at [komoog.readthedocs.io](http://komoog.readthedocs.io).
 
 ## Changelog
 
