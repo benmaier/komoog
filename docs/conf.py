@@ -57,7 +57,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
-    'rst2pdf.pdfbuilder',
 ]
 
 if USE_KATEX:
