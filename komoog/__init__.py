@@ -13,3 +13,7 @@ from .metadata import (
         __email__,
         __status__,
     )
+
+from .paths import _prepare
+
+_prepare()
