@@ -32,7 +32,7 @@ setup(
                  'Programming Language :: Python :: 3.8',
                  ],
     project_urls={
-        'Documentation': 'http://komoog.benmaier.org',
+        'Documentation': 'http://komoog.readthedocs.io',
         'Contributing Statement': 'https://github.com/benmaier/komoog/blob/master/CONTRIBUTING.md',
         'Bug Reports': 'https://github.com/benmaier/komoog/issues',
         'Source': 'https://github.com/benmaier/komoog/',
