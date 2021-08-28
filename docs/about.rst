@@ -122,6 +122,7 @@ installed by ``pip`` during the installation process
 -  ``gpxpy>=1.4.2``
 -  ``simplejson>=3.17.2``
 -  ``simpleaudio=>=1.0.4``
+-  ``matplotlib>=3.0.0``
 
 Documentation
 -------------

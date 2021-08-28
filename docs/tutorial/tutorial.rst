@@ -241,6 +241,17 @@ Converting tours to sound without going through all the hassle
                                         )
     audio.play_audio(audio_data, sampling_rate)
 
+Plot a tour
+-----------
+
+.. code:: python
+
+   import komoog.plot as plot
+
+   plot.plot_tour(tours[2])
+
+.. image:: out_signal.png
+
 Make the frequency of the sound follow the elevation profile
 ------------------------------------------------------------
 

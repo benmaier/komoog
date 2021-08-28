@@ -23,6 +23,7 @@ setup(
                        'gpxpy>=1.4.2',
                        'simplejson>=3.17.2',
                        'simpleaudio>=1.0.4',
+                       'matplotlib>=3.0.0',
     ],
     tests_require=['pytest', 'pytest-cov'],
     setup_requires=['pytest-runner'],

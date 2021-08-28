@@ -35,6 +35,7 @@ komoog
    api/audio
    api/gpx
    api/io
+   api/plot
    api/paths
 
 .. .. toctree::
