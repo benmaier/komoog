@@ -28,7 +28,7 @@ names = set()
 
 table = []
 
-url = 'https://github.com/benmaier/komoog/raw/main/cookbook/wavs/'
+url = 'https://raw.githubusercontent.com/benmaier/komoog/main/cookbook/wavs/'
 
 header = ['name','profile','constant audio', 'profile audio']
 
@@ -90,7 +90,7 @@ for itour, tour in enumerate(tours[:5]):
         else:
             add = 'constant'
         wavpath = 'wavs/{0:02d}_{1}.wav'.format(itour,add)
-        row.append(url+wavpath+'.mp4')
+        row.append( ('![{0:02d}]('+(url+wavpath+'.mp4')+')').format(itour))
         io.write_wav(wavpath,audiod,sampling_rate)
 
     table.append(row)
