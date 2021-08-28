@@ -1,5 +1,6 @@
 # komoog
 
+
 Convert your [komoot](komoot.com) hiking/cycling trips to audio signals.
 
 * repository: https://github.com/benmaier/komoog/
@@ -31,15 +32,56 @@ Note that I adapted code from
 [js-on/medium\_komoot](https://github.com/js-on/medium_komoot)
 to access trips on komoot.
 
-## Example tour/sounds
+## Examples
 
-| name                           | profile                                                                                                                                                             | constant audio                                                                                           | profile audio                                                                                           |
-|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Colorado Provencale in Rustrel | ![Colorado Provencale in Rustrel – La Doa Loop from Rustrel](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/imgs/00.png)                  | ![00](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/00_constant.wav.mp4) | ![00](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/00_profile.wav.mp4) |
-| Lookout                        | ![Lookout – L´Aiguebrun Loop from Buoux](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/imgs/01.png)                                      | ![01](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/01_constant.wav.mp4) | ![01](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/01_profile.wav.mp4) |
-| Gorges de Régalon              | ![Gorges de Régalon – Vue de la Gorge Loop from Quartier Gardet](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/imgs/02.png)              | ![02](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/02_constant.wav.mp4) | ![02](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/02_profile.wav.mp4) |
-| Forêt des Cèdres               | ![Forêt des Cèdres - Vue au sud – Belvédère Loop from Lacoste](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/imgs/03.png)                | ![03](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/03_constant.wav.mp4) | ![03](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/03_profile.wav.mp4) |
-| Crête du Grand luberon         | ![Crête du Grand luberon – Le Mourre Nègre (1125m) Loop from Rue de l'Église](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/imgs/04.png) | ![04](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/04_constant.wav.mp4) | ![04](https://raw.githubusercontent.com/benmaier/komoog/raw/main/cookbook/wavs/wavs/04_profile.wav.mp4) |
+### Colorado Provencale in Rustrel – La Doa Loop from Rustrel
+
+
+https://user-images.githubusercontent.com/10728380/131221697-8f5ff1b5-5fae-47a4-b36b-ad8c39992718.mp4
+
+
+https://user-images.githubusercontent.com/10728380/131221699-a9dd5741-3ae5-4d16-ad44-9ce8642bbecb.mp4
+
+### Lookout – L´Aiguebrun Loop from Buoux
+
+
+
+https://user-images.githubusercontent.com/10728380/131221700-085da556-614a-4b9d-8f7d-c88e0d9f172c.mp4
+
+
+
+https://user-images.githubusercontent.com/10728380/131221701-85fcb6ed-eadc-453b-a32c-98c5008c945b.mp4
+
+### Gorges de Régalon – Vue de la Gorge Loop from Quartier Gardet
+
+
+
+
+https://user-images.githubusercontent.com/10728380/131221702-36af7891-9089-45a8-8b7f-262bf29d4383.mp4
+
+
+
+https://user-images.githubusercontent.com/10728380/131221704-131734e1-d82c-4fe3-a6d4-749c69fdd34e.mp4
+
+### Forêt des Cèdres - Vue au sud – Belvédère Loop from Lacoste
+
+
+
+
+https://user-images.githubusercontent.com/10728380/131221705-95615790-45c3-4266-9f46-8c287c6cb167.mp4
+
+
+
+https://user-images.githubusercontent.com/10728380/131221707-3add51cb-ad1e-49a0-9801-9f69086f5f62.mp4
+
+### Crête du Grand luberon – Le Mourre Nègre (1125m) Loop from Rue de l'Église
+
+
+
+https://user-images.githubusercontent.com/10728380/131221708-f209abdd-3a57-4bca-b0ae-c726e25064c5.mp4
+
+
+https://user-images.githubusercontent.com/10728380/131221709-8add9296-b7a6-46ff-97f5-520e854e0041.mp4
 
 
 ## Install
