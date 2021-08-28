@@ -34,7 +34,7 @@ to access trips on komoot.
 
 ## Examples
 
-### Colorado Provencale in Rustrel – La Doa Loop from Rustrel
+### Colorado Provencale in Rustrel - La Doa Loop from Rustrel
 
 
 https://user-images.githubusercontent.com/10728380/131221697-8f5ff1b5-5fae-47a4-b36b-ad8c39992718.mp4
@@ -42,7 +42,7 @@ https://user-images.githubusercontent.com/10728380/131221697-8f5ff1b5-5fae-47a4-
 
 https://user-images.githubusercontent.com/10728380/131221699-a9dd5741-3ae5-4d16-ad44-9ce8642bbecb.mp4
 
-### Lookout – L´Aiguebrun Loop from Buoux
+### Lookout - L'Aiguebrun Loop from Buoux
 
 
 
@@ -52,7 +52,7 @@ https://user-images.githubusercontent.com/10728380/131221700-085da556-614a-4b9d-
 
 https://user-images.githubusercontent.com/10728380/131221701-85fcb6ed-eadc-453b-a32c-98c5008c945b.mp4
 
-### Gorges de Régalon – Vue de la Gorge Loop from Quartier Gardet
+### Gorges de Régalon - Vue de la Gorge Loop from Quartier Gardet
 
 
 
@@ -63,7 +63,7 @@ https://user-images.githubusercontent.com/10728380/131221702-36af7891-9089-45a8-
 
 https://user-images.githubusercontent.com/10728380/131221704-131734e1-d82c-4fe3-a6d4-749c69fdd34e.mp4
 
-### Forêt des Cèdres - Vue au sud – Belvédère Loop from Lacoste
+### Forêt des Cèdres - Vue au sud - Belvédère Loop from Lacoste
 
 
 
@@ -74,7 +74,7 @@ https://user-images.githubusercontent.com/10728380/131221705-95615790-45c3-4266-
 
 https://user-images.githubusercontent.com/10728380/131221707-3add51cb-ad1e-49a0-9801-9f69086f5f62.mp4
 
-### Crête du Grand luberon – Le Mourre Nègre (1125m) Loop from Rue de l'Église
+### Crête du Grand luberon - Le Mourre Nègre (1125m) Loop from Rue de l'Église
 
 
 

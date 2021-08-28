@@ -33,6 +33,8 @@ blburl = 'https://github.com/benmaier/komoog/blob/main/cookbook/wavs/'
 
 header = ['name','profile','constant audio', 'profile audio']
 
+rows = ["# Examples",""]
+
 for itour, tour in enumerate(tours[:5]):
 
     row = []
@@ -42,7 +44,13 @@ for itour, tour in enumerate(tours[:5]):
     short_name = tour['name'].split('-')[0]
     short_name = short_name.split('–')[0]
     short_name = short_name.split('from')[0]
-    row.append(short_name)
+    rows.append("### " + tour['name'])
+    rows.append("")
+    rows.append("* constant")
+    rows.append("")
+    rows.append("* profile")
+    rows.append("")
+    #row.append(short_name)
 
     #print(itour, tour['name'])
     fig, ax = pl.subplots(1,1,figsize=(4,1.))
@@ -77,7 +85,7 @@ for itour, tour in enumerate(tours[:5]):
     fig.savefig(imgpath,dpi=72)
 
 
-    row.append('!['+tour['name']+']('+rawurl+imgpath+')')
+    #row.append('!['+tour['name']+']('+rawurl+imgpath+')')
 
     for set_tune_to_follow_tour_profile, approximate_length_in_seconds in zip([False, True],[2,4]):
         audiod, sampling_rate = audio.convert_tour_to_audio(tour,
@@ -98,5 +106,6 @@ for itour, tour in enumerate(tours[:5]):
     table.append(row)
 
 #print(tabulate(table,headers=header,tablefmt='github'))
+print("\n".join(rows))
 
 pl.show()
