@@ -28,7 +28,8 @@ names = set()
 
 table = []
 
-url = 'https://raw.githubusercontent.com/benmaier/komoog/main/cookbook/wavs/'
+rawurl = 'https://raw.githubusercontent.com/benmaier/komoog/main/cookbook/wavs/'
+blburl = 'https://github.com/benmaier/komoog/blob/main/cookbook/wavs/'
 
 header = ['name','profile','constant audio', 'profile audio']
 
@@ -76,7 +77,7 @@ for itour, tour in enumerate(tours[:5]):
     fig.savefig(imgpath,dpi=72)
 
 
-    row.append('!['+tour['name']+']('+url+imgpath+')')
+    row.append('!['+tour['name']+']('+rawurl+imgpath+')')
 
     for set_tune_to_follow_tour_profile, approximate_length_in_seconds in zip([False, True],[2,4]):
         audiod, sampling_rate = audio.convert_tour_to_audio(tour,
@@ -90,11 +91,12 @@ for itour, tour in enumerate(tours[:5]):
         else:
             add = 'constant'
         wavpath = 'wavs/{0:02d}_{1}.wav'.format(itour,add)
-        row.append( ('![{0:02d}]('+(url+wavpath+'.mp4')+')').format(itour))
+        fig.savefig(wavpath+'.png',dpi=72)
+        #row.append( ('[play]('+(rawurl+wavpath+'.mp4')+')'))
         io.write_wav(wavpath,audiod,sampling_rate)
 
     table.append(row)
 
-print(tabulate(table,headers=header,tablefmt='github'))
+#print(tabulate(table,headers=header,tablefmt='github'))
 
 pl.show()
